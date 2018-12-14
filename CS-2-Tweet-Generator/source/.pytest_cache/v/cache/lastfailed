@@ -1,12 +1,5 @@
 {
   "dictogram_test.py::DictogramTest::test_add_count": true,
-  "hashtable_test.py::HashTableTest::test_delete": true,
-  "hashtable_test.py::HashTableTest::test_init": true,
-  "hashtable_test.py::HashTableTest::test_length": true,
-  "hashtable_test.py::HashTableTest::test_set_and_get": true,
-  "hashtable_test.py::HashTableTest::test_set_twice_and_get": true,
-  "linkedlist_test.py::LinkedListTest": true,
-  "linkedlist_test.py::NodeTest": true,
   "listogram_test.py::ListogramTest::test_add_count": true,
   "listogram_test.py::ListogramTest::test_contains": true,
   "listogram_test.py::ListogramTest::test_entries": true,

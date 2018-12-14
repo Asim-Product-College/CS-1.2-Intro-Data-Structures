@@ -132,6 +132,14 @@ class HashTable(object):
         entry = bucket.find
         return entry[1]
         """
+
+        bucket = self.buckets[self._bucket_index(key)]
+        item = bucket.find(lambda x: x[0] == key)
+
+        if item is not None:
+            return item[1]
+        else:
+            raise KeyError(f'Key not found: {key}')
         # Find bucket where given key belongs
         # Check if key-value entry exists in bucket
         # If found, return value associated with given key
@@ -143,14 +151,14 @@ class HashTable(object):
 
         if item is None:
             raise KeyError('Key not found: {}'.format(key))
-        return key_value[1]
+            return key_value[1]
 
         # instead - use find here!
         
         # get each item in the bucket. - another operation. rewrite this bc it could be worse, and using more memory.
-        for ikey,value in bucket.items():
-            if ikey == key:
-                return value
+        # for ikey,value in bucket.items():
+        #     if ikey == key:
+        #         return value
         raise KeyError('Key not found: {}'.format(key))
 
     def set(self, key, value):
@@ -196,12 +204,12 @@ class HashTable(object):
         # Hint: raise KeyError('Key not found: {}'.format(key))
         raise KeyError('Key not found: {}'.format(key))
 
-    def length(self):
-        # l is going to happen b times.
-        # so run time O(n) or O(b*l)
-        length = 0 #const time 
-        for bucket in self.buckets: #O(b) - exact num of iterations.
-            length += bucket.length() # += constant time, method.length is O(l)
+    # def length(self):
+    #     # l is going to happen b times.
+    #     # so run time O(n) or O(b*l)
+    #     length = 0 #const time 
+    #     for bucket in self.buckets: #O(b) - exact num of iterations.
+    #         length += bucket.length() # += constant time, method.length is O(l)
 
         
 
