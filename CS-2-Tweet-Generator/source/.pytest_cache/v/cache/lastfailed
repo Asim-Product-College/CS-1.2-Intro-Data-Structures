@@ -1,8 +1,4 @@
 {
   "dictogram_test.py::DictogramTest::test_add_count": true,
-  "listogram_test.py::ListogramTest::test_add_count": true,
-  "listogram_test.py::ListogramTest::test_contains": true,
-  "listogram_test.py::ListogramTest::test_entries": true,
-  "listogram_test.py::ListogramTest::test_frequency": true,
-  "listogram_test.py::ListogramTest::test_types": true
+  "listogram_test.py::ListogramTest::test_entries": true
 }
