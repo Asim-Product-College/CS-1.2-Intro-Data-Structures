@@ -5,7 +5,7 @@ class MarkovChain(dict):
     def __init__(self, wordsLst):
         super(MarkovChain, self).__init__()
         self.wordFrequencies = Dictogram(wordsLst)
-        self._comile(wordsLst)
+        self._compile(wordsLst)
 
     def _compile(self, words):
         for i in range(len(words)-1):

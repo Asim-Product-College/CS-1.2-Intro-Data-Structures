@@ -52,37 +52,6 @@ def generate_random_word(histogram_weights):
     return random.choice(list(histogram_weights))
     # pull random word (call function) to prove how random it is...
 
-# function to generate random word based on frequency
-def random_word(histogram):
-    '''
-        gen ran sent
-          • dafa
-    '''
-    words, frequencies = zip(*histogram.items())
-    # [red, blue, green]
-    # [2,3,4,5]
-
-    accumulator, accumulated = 0, []
-    for i in frequencies:
-        accumulator += i
-        accumulated.append(accumulator)
-    
-    #[2,5,9,14]
-    # print("accumulated:",accumulated)
-
-    random_num = random.randint(0, accumulator)
-    # loop thru each accum val, and enumerator - so u have its'n index
-    for index, seperator in enumerate(accumulated):
-        if random_num < seperator:
-            return words[index]
-
-def random_sentence(histogram):
-    sentence = []
-    for i in range(8):
-        sentence.append(random_word(histogram))
-    sentence = " ".join(sentence)
-    return sentence
-
 def test_randomness(random_word):
     # words = source_text_to_list('/usr/share/dict/words')
     # histogram = create_histogram(words)

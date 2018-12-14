@@ -2,7 +2,6 @@
 
 from __future__ import division, print_function  # Python 2 and 3 compatibility
 
-
 class Listogram(list):
     """Listogram is a histogram implemented as a subclass of the list type."""
 
@@ -20,6 +19,9 @@ class Listogram(list):
     def add_count(self, word, count=1):
         """Increase frequency count of given word by given count amount."""
         # TODO: Increase word frequency by count
+        self.tokens += count
+
+        if index 
         flag = False
         for inner_list in self:
             if word == inner_list[0]:
